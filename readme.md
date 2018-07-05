@@ -1,27 +1,10 @@
-# Laravel PHP Framework
+Requerimiento: 
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+"Una empresa de envíos de paquetes tiene un modelo de negocios basado en franquicias en el que cada una de éstas, puede recibir paquetes para ser enviados, en el momento de la recepción del paquete una persona trabajadora de la franquicia registra el envío y genera un comprobante que debe imprimirse y pegarse en el paquete mencionado. Al crearse dicho comprobante debe notificarse a la central que hace los envíos, puesto que éstos podrán aprobar o no el envío basados en las características del paquete al recibirse en la agencia central, si el paquete es rechazado o aceptado (y enviado) en la central debe cambiarse el estatus del paquete y dicho cambio será visible por el personal de franquicia para información al cliente, así como serán también visibles los datos del envío definitivo, como el número de guía con que puede rastrearse el paquete y los links donde puede verificarse el paradero del paquete según la empresa con la que se envió el mismo".
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+El modelo descrito arriba se satisfizo con ésta aplicación, haciendo uso del scaffolding de seguridad de Laravel, sistema de roles hecho a mano y basado en middleware. La gestión de los comprobantes y su estado se hizo a través de un CRUD estandar de "envíos" y "estados". Se uso la librería DOMPDF para la generación de dichos comprobantes. El frontend se desarrolló completamente con el sistema de plantillas estandar de Laravel, sin mucha magia.
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Para esta aplicación se usó Laravel 5.2.
 
-## Official Documentation
-
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Andrés Salazar
+salazarcode@gmail.com
